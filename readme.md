@@ -78,49 +78,85 @@ public static bool CheckElementInList(List<int> numbers, int element)
 
 **Hinweis**: Nutze die `Contains` Methode der List-Klasse.
 
-### Aufgabe 4: Finden Sie die zwei Zahlen mit dem kleinsten Abstand
+### Aufgabe 4: Finden des höchsten und niedrigsten Wertes in einer Liste
 
-**Ziel**: Implementiere eine Methode, die die zwei Zahlen in einer Liste findet, die den kleinsten Abstand zueinander haben. Der "Abstand" wird als der absolute Unterschied zwischen zwei Zahlen definiert.
+#### 4.1 Finden des höchsten Wertes in einer Liste
 
-**Inputs**:
-
--   Eine Liste von Integers (mit mindestens 2 Elementen).
-
-**Outputs**:
-
--   Ein Tuple mit den zwei Zahlen, die den kleinsten Abstand zueinander haben.
-
-**Funktionssignatur**:
-
-```csharp
-public static (int, int) FindClosestNumbers(List<int> numbers)
-{
-    // Dein Code hier
-}
-```
-
-**Hinweis**: Du könntest überlegen, die Liste zuerst zu sortieren und dann die benachbarten Elemente zu vergleichen.
-
-### Aufgabe 5: Finden Sie die längste Sequenz von aufeinanderfolgenden Zahlen
-
-**Ziel**: Implementiere eine Methode, die die längste Sequenz von aufeinanderfolgenden Zahlen in einer Liste findet. "Aufeinanderfolgend" bedeutet hier, dass der Unterschied zwischen zwei benachbarten Zahlen genau 1 ist.
+**Ziel**: Implementiere eine Methode, die den höchsten Wert in einer Liste von Ganzzahlen zurückgibt. Wenn die Liste leer ist, sollte 0 zurückgegeben werden.
 
 **Inputs**:
 
--   Eine Liste von Integers.
+-   Eine Liste von Ganzzahlen (`List<int> numbers`)
 
 **Outputs**:
 
--   Eine Liste von Integers, die die längste Sequenz von aufeinanderfolgenden Zahlen repräsentiert.
+-   Der höchste Wert in der Liste als `int`.
 
 **Funktionssignatur**:
 
-```csharp
-public static List<int> FindLongestConsecutiveSequence(List<int> numbers)
+```
+csharpCopy code
+`public static int FindMax(List<int> numbers)
 {
     // Dein Code hier
-}
+}`
 
 ```
 
-**Hinweis**: Du könntest die Zahlen zunächst sortieren und dann durch die Liste iterieren, während du die längste Sequenz von aufeinanderfolgenden Zahlen trackst.
+**Beispiele**:
+
+-   Eingabe: `[3, 5, 2, 8, 1]`-   Ausgabe: `8`
+
+#### 4.2 Finden des niedrigsten Wertes in einer Liste
+
+**Ziel**: Implementiere eine Methode, die den niedrigsten Wert in einer Liste von Ganzzahlen zurückgibt. Wenn die Liste leer ist, sollte 0 zurückgegeben werden.
+
+**Inputs**:
+
+-   Eine Liste von Ganzzahlen (`List<int> numbers`)
+
+**Outputs**:
+
+-   Der niedrigste Wert in der Liste als `int`.
+
+**Funktionssignatur**:
+
+```
+csharpCopy code
+`public static int FindMin(List<int> numbers)
+{
+    // Dein Code hier
+}`
+
+```
+
+**Beispiele**:
+
+-   Eingabe: `[3, 5, 2, 8, 1]`-   Ausgabe: `1`
+
+### Aufgabe 5: Finden des Mittelwerts einer Liste von Zahlen
+
+**Ziel**: Implementiere eine Methode, die den Mittelwert der Zahlen in einer Liste von Ganzzahlen als Gleitkommazahl zurückgibt. Wenn die Liste leer ist, sollte 0.0 zurückgegeben werden.
+
+**Inputs**:
+
+-   Eine Liste von Ganzzahlen (`List<int> numbers`)
+
+**Outputs**:
+
+-   Der Mittelwert der Zahlen in der Liste als `double`.
+
+**Funktionssignatur**:
+
+```
+csharpCopy code
+`public static double CalculateAverage(List<int> numbers)
+{
+    // Dein Code hier
+}`
+
+```
+
+**Beispiele**:
+
+-   Eingabe: `[1, 2, 3, 4, 5]`-   Ausgabe: `3.0`

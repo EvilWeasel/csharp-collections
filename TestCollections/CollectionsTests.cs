@@ -40,32 +40,44 @@ public class CollectionsTests
   }
 
   [Fact]
-  public void FindClosestNumbersTest()
+  public void FindMaxTest()
   {
-    var list = new List<int> { 1, 3, 7, 8, 20, 21 };
-    var result = CollectionsHelper.FindClosestNumbers(list);
+    var list = new List<int> { 3, 5, 2, 8, 1 };
+    var result = CollectionsHelper.FindMax(list);
 
-    Assert.Equal((20, 21), result);
+    Assert.Equal(8, result);
 
-    // Test edge case with negative numbers
-    var list2 = new List<int> { -10, -5, -2, 0, 3 };
-    var result2 = CollectionsHelper.FindClosestNumbers(list2);
+    var emptyList = new List<int>();
+    var resultForEmptyList = CollectionsHelper.FindMax(emptyList);
 
-    Assert.Equal((-2, 0), result2);
+    Assert.Equal(0, resultForEmptyList);
   }
 
   [Fact]
-  public void FindLongestConsecutiveSequenceTest()
+  public void FindMinTest()
   {
-    var list = new List<int> { 1, 2, 3, 5, 6, 7, 10, 11 };
-    var result = CollectionsHelper.FindLongestConsecutiveSequence(list);
+    var list = new List<int> { 3, 5, 2, 8, 1 };
+    var result = CollectionsHelper.FindMin(list);
 
-    Assert.Equal(new List<int> { 5, 6, 7 }, result);
+    Assert.Equal(1, result);
 
-    // Test edge case with negative numbers and zeros
-    var list2 = new List<int> { -3, -2, -1, 0, 1, 2 };
-    var result2 = CollectionsHelper.FindLongestConsecutiveSequence(list2);
+    var emptyList = new List<int>();
+    var resultForEmptyList = CollectionsHelper.FindMin(emptyList);
 
-    Assert.Equal(new List<int> { -3, -2, -1, 0, 1, 2 }, result2);
+    Assert.Equal(0, resultForEmptyList);
+  }
+
+  [Fact]
+  public void CalculateAverageTest()
+  {
+    var list = new List<int> { 1, 2, 3, 4, 5 };
+    var result = CollectionsHelper.CalculateAverage(list);
+
+    Assert.Equal(3.0, result);
+
+    var emptyList = new List<int>();
+    var resultForEmptyList = CollectionsHelper.CalculateAverage(emptyList);
+
+    Assert.Equal(0.0, resultForEmptyList);
   }
 }

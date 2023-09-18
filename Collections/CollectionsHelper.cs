@@ -1,33 +1,43 @@
-﻿namespace Collections;
-public static class CollectionsHelper
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Collections
 {
-  public static List<int> AddRandomNumbersToList(List<int> numbers, int quantity)
+  public static class CollectionsHelper
   {
-    // Dein Code hier
-    return null;
-  }
+    public static List<int> AddRandomNumbersToList(List<int> numbers, int quantity)
+    {
+      // your code here...
 
-  public static (List<int>, string) RemoveElementFromList(List<int> numbers, int element)
-  {
-    // Dein Code hier
-    return (null, string.Empty);
-  }
+    }
 
-  public static bool CheckElementInList(List<int> numbers, int element)
-  {
-    // Dein Code hier
-    return false;
-  }
+    public static (List<int>, string) RemoveElementFromList(List<int> numbers, int element)
+    {
+      // your code here...
 
-  public static (int, int) FindClosestNumbers(List<int> numbers)
-  {
-    // Dein Code hier
-    return (0, 0);
-  }
+    }
 
-  public static List<int> FindLongestConsecutiveSequence(List<int> numbers)
-  {
-    // Dein Code hier
-    return null;
+    public static bool CheckElementInList(List<int> numbers, int element)
+    {
+      // your code here...
+
+    }
+
+    public static int FindMax(List<int> numbers)
+    {
+      // your code here...
+
+    }
+    public static int FindMin(List<int> numbers)
+    {
+      // your code here...
+
+    }
+    public static double CalculateAverage(List<int> numbers)
+    {
+      // your code here...
+    }
+
   }
 }
